@@ -12,20 +12,22 @@ public class Day08_2 {
 		if (uniqueValues.length == 1) { // 배열의 모든 요소가 같다.
 			score = 1111 * uniqueValues[0];
 		} 
-		else if (uniqueValues.length == 2) {
+		if (uniqueValues.length == 2) {
 			int p = uniqueValues[0];
 			int q = uniqueValues[1];
 			int count1 = (int) Arrays.stream(values).filter(val -> val == p).count(); // 같은숫자가 p, 다른숫자 q
 			int count2 = (int) Arrays.stream(values).filter(val -> val == q).count();
 			if (count1 == 3) { // 배열의 세 요소가 같고, 나머지 하나는 다르다.
 				score = (int) Math.pow((10 * p + q), 2);
-			} else if (count2 == 3) {
+			} 
+			if (count2 == 3) {
 				score = (int) Math.pow((10 * q + p), 2);
-			} else if (count1 == 2 && count2 == 2) { // 배열의 두 요소가 같고, 나머지 두 요소도 같다.
+			} 
+			if (count1 == 2 && count2 == 2) { // 배열의 두 요소가 같고, 나머지 두 요소도 같다.
 				score = (p + q) * Math.abs(p - q); // |p-q| : 절대값 반환
 			}
 		} 
-		else if (uniqueValues.length == 3) { // 배열의 두 요소가 같고, 나머지 두 요소가 다르다.
+		if (uniqueValues.length == 3) { // 배열의 두 요소가 같고, 나머지 두 요소가 다르다.
 			int p = uniqueValues[0]; // 같은값
 			int q = uniqueValues[1];
 			int r = uniqueValues[2];
@@ -34,13 +36,15 @@ public class Day08_2 {
 			int count3 = (int) Arrays.stream(values).filter(val -> val == r).count();
 			if (count1 == 2) {
 				score = q * r;
-			} else if (count2 == 2) {
+			}
+			if (count2 == 2) {
 				score = p * r;
-			} else if (count3 == 2) {
+			}
+			if (count3 == 2) {
 				score = p * q;
 			}
 		} 
-		else if (uniqueValues.length == 4) { // 같은 값이 없습니다.
+		if (uniqueValues.length == 4) { // 같은 값이 없습니다.
 			Arrays.sort(values); // 오름차순
 			score = values[0];
 		}
