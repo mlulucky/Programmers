@@ -19,3 +19,10 @@ function solution(arr, queries) {
 // 	return arr;
 // }
 
+// 참고할만한 번외 문제풀이 - forEach, while 문
+// function solution(arr, queries) {
+//     queries.forEach(([s, e]) => {
+//         while (s <= e) arr[s++]++;
+//     });
+//     return arr;
+// }
