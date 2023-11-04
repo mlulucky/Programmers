@@ -11,3 +11,12 @@ public class Day17_2 {
 		return count;
 	}
 }
+
+// 참고할만한 번외문제 풀이 _ substring, startsWith 사용
+// int cnt = 0;
+// for(int i=0; i<myString.length(); i++) {
+// 		if(myString.substring(i).startsWith(pat)){
+// 				cnt++;
+// 		}
+// }
+// return cnt;
