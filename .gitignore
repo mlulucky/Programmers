@@ -53,6 +53,10 @@ cmake-build-*/
 # File-based project format
 *.iws
 
+.DS_Store
+.idea/**/vcs.xml
+/bin/
+
 # IntelliJ
 out/
 
