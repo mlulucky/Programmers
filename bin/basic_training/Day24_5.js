@@ -1,14 +1,17 @@
 function solution(n) {
-	let answer = [[]];
-	// 모든 원소는 0 으로 하고, 인덱스가 같은경우만 1로 하기
+	let answer = [];
 	for(let i=0; i<n; i++) {
-		answer[i] = [];
+		answer[i] = Array(n).fill(0);
+		answer[i][i] = 1;
 	}
-	
-	for(let i=0; i<n; i++) {
-		answer[i] = [];
-	}
-
-
 	return answer;
 }
+
+// 참고할만한 번외 문제풀이
+// const answer = new Array(n).fill().map((_, idx)=> {
+// 	const arr = new Array(n).fill(0);
+// 	arr[idx] = 1;
+// 	return arr;
+// });
+
+// return answer;
